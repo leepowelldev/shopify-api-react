@@ -1,0 +1,9 @@
+.container {
+  display: flex;
+}
+
+.input {
+  display: inline;
+  margin: 0 0.25rem;
+  width: 2rem;
+}

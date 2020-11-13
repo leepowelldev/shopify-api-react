@@ -1,0 +1,23 @@
+version: '3.7'
+
+services:
+  web:
+    image: leepowell/silverstripe-web:7.3
+    working_dir: /var/www
+    restart: unless-stopped
+    volumes:
+      - ./dist:/var/www/html
+    environment:
+      VIRTUAL_HOST: shopify.test
+    networks:
+      - default
+      - nginx-proxy
+    logging:
+      driver: 'json-file'
+      options:
+        max-size: '200k'
+        max-file: '3'
+
+networks:
+  nginx-proxy:
+    external: true

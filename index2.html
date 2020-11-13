@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="http://sdks.shopifycdn.com/buy-button/latest/buybutton.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <div style="margin: 3rem 0">RATINGS AND REVIEWS</div>
+
+    <div id="root2"></div>
+    <script src="http://sdks.shopifycdn.com/buy-button/2.1.7/buybutton.js"></script>
+    <script>
+      var client = ShopifyBuy.buildClient({
+        domain: 'leepowelldev.myshopify.com',
+        storefrontAccessToken: '18f232cd168897d3154d73a1d9281672',
+      });
+
+      var ui = ShopifyBuy.UI.init(client);
+
+      ui.createComponent('product', {
+        id: 5918258888880,
+        node: document.getElementById('root'),
+        options: {
+          product: {
+            iframe: false,
+            order: [
+              'img',
+              'title',
+              'description',
+              'price',
+              'options',
+              'quantity',
+              'button',
+            ],
+            contents: {
+              description: true,
+              quantity: true,
+              quantityIncrement: true,
+              quantityDecrement: true,
+            },
+            text: {
+              button: 'BUY!',
+            },
+          },
+          cart: {
+            iframe: false,
+            popup: false,
+          },
+        },
+      });
+
+      ui.createComponent('product', {
+        id: 5918258888880,
+        node: document.getElementById('root2'),
+
+        options: {
+          product: {
+            iframe: false,
+            order: [
+              'imgWithCarousel',
+              'title',
+              'description',
+              'price',
+              'options',
+              'quantity',
+              'button',
+              'foo',
+            ],
+            templates: {},
+            contents: {
+              foo: true,
+              imgWithCarousel: true,
+              description: true,
+              quantity: true,
+              quantityIncrement: true,
+              quantityDecrement: true,
+            },
+            text: {
+              button: 'BUY!',
+            },
+          },
+          cart: {
+            iframe: false,
+            popup: false,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

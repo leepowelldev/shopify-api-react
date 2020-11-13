@@ -1,0 +1,33 @@
+{
+  "name": "shopify-api",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node -r dotenv/config ./node_modules/.bin/parcel serve src/index.html",
+    "build": "node -r dotenv/config ./node_modules/.bin/parcel src/index.html",
+    "lint": "eslint .",
+    "lint:fix": "npm run lint -- --fix"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "babel-eslint": "^10.1.0",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.11.0",
+    "eslint-config-react-app": "^5.2.1",
+    "eslint-plugin-flowtype": "^5.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.21.4",
+    "eslint-plugin-react-hooks": "^4.1.2",
+    "js-cookie": "^2.2.1",
+    "parcel-bundler": "^1.12.4",
+    "postcss": "^8.1.1",
+    "postcss-modules": "^3.2.2",
+    "prettier": "^2.1.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-use": "^15.3.4",
+    "regenerator-runtime": "^0.13.7",
+    "shopify-buy": "^2.11.0"
+  }
+}
